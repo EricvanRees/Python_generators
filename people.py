@@ -14,6 +14,8 @@ majors = ['Major', 'Engineering', 'CompSci', 'Arts', 'Business']
 
 print(f'Memory (Before): {memory_profiler.memory_usage()}')
 
+# function to generate a list of one million random items
+
 
 def people_list(num_people):
     result = []
@@ -25,6 +27,8 @@ def people_list(num_people):
         }
         result.append(person)
     return result
+
+# function that uses a generator to create one million random items
 
 
 def people_generator(num_people):
