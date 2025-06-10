@@ -1,3 +1,10 @@
+"""
+An example to show the time and memory difference when creating a random million list items.
+First example shows the time and memory use of generating a list, the second example uses a generator.
+When you convert the generator to a list, the performance gains are gone.
+The generator is much faster and uses less memory than the list. 
+"""
+
 import memory_profiler
 import random
 import time
@@ -36,6 +43,7 @@ Memory (After) : [275.75390625] - memory usage explodes
 Took 0.892071100010071 seconds.
 """
 
+# example 1: using a list to generate a list of a million random items
 t1 = time.perf_counter()
 people = people_list(1000000)
 t2 = time.perf_counter()
@@ -47,8 +55,8 @@ Took 4.9000082071870565e-06 seconds.
 """
 
 
+# example 2: using a generator to generate a list of a million random items
 """ t1 = time.perf_counter()
-
 people = people_generator(1000000)
 # people = list(people_generator(1000000)) # lose performance boost
 t2 = time.perf_counter() """
