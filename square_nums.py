@@ -25,6 +25,7 @@ my_nums = [x*x for x in [1,2,3,4,5]]
 # convert list comprehension to generator:
 my_nums = (x*x for x in [1,2,3,4,5])
 # to print all values, convert generator to list:
+# performance gain from generators are lost when converting to list
 print(list(my_nums)) # [1, 4, 9, 16, 25]
 
 print(next(my_nums)) # 1
